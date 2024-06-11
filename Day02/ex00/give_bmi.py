@@ -65,7 +65,7 @@ def input_cehck(lst1: list, lst2: list, lst3: list) -> bool:
 def main(height, weight, limit):
     """
     Handles error cases if the lists are not the same size,
-    are not int or float
+    are not int or float and make bmi and apply limit.
     """
     if input_cehck(height, weight, limit):
         bmi = give_bmi(height, weight)
