@@ -20,7 +20,7 @@ def ft_load(path: str):
     content in RGB format.
     """
     image = Image.open(path)
-    image_shape = [image.size[1], image.size[0], mode_to_channels(image.mode)]
+    image_shape = (image.size[1], image.size[0], mode_to_channels(image.mode))
     print(f"The shape of the image is: {image_shape}")
     if image.mode != 'RGB':
         image = image.convert('RGB')
