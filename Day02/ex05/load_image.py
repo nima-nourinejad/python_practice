@@ -20,15 +20,16 @@ def ft_load(path: str):
     content in RGB format.
     """
     image = Image.open(path)
+    image.show()
     image_format = image.format
-    print(f"The format of the image is: {image_format}")
     image_shape = [image.size[1], image.size[0], mode_to_channels(image.mode)]
-    print(f"The shape of the image is: {image_shape}")
     if image.mode != 'RGB':
         image = image.convert('RGB')
     all_pixels = []
-    for pixel in image.getdata():
-        all_pixels.append(list(pixel))
+    for i in range(image_shape[0]):
+        for j in range(image_shape[1]):
+            all_pixels.append((i + 256, j + 256, 0))
+            all_pixels.append(image.getpixel((j, i)))
     array = np.array(all_pixels)
     return array
 
