@@ -59,7 +59,7 @@ def plot(dataset: pd.DataFrame, country1: str, country2: str):
 
 def main():
     """
-    Run load.
+    Run load and plot.
     """
     args = sys.argv
     if len(args) == 4:

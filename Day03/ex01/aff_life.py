@@ -22,7 +22,7 @@ def plot(dataset: pd.DataFrame, country: str):
 
 def main():
     """
-    Run load.
+    Run load and plot.
     """
     args = sys.argv
     if len(args) == 3:
