@@ -11,7 +11,7 @@ def load(path: str):
         print(e)
 
 
-def main():
+def main(path: str):
     """
     Run load.
     """
