@@ -4,9 +4,9 @@ import sys
 
 class Baratheon(Character):
     """Baratheon class"""
-    def __new__(cls, first_name, is_alive=True):
-        """creates a baratheon without going through the Character class"""
-        instance = object.__new__(cls)
+    def __new__(self, first_name, is_alive=True):
+        """creates a lannister without going through the Character class"""
+        instance = object.__new__(self)
         instance.first_name = first_name
         instance.is_alive = is_alive
         return instance
@@ -33,9 +33,9 @@ class Baratheon(Character):
 
 class Lannister(Character):
     """Lannister class"""
-    def __new__(cls, first_name, is_alive=True):
+    def __new__(self, first_name, is_alive=True):
         """creates a lannister without going through the Character class"""
-        instance = object.__new__(cls)
+        instance = object.__new__(self)
         instance.first_name = first_name
         instance.is_alive = is_alive
         return instance
