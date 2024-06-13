@@ -43,8 +43,8 @@ class Lannister(Character):
     def __init__(self, first_name, is_alive=True):
         """Character has a first name and is alive or not(by default: alive)"""
         super().__init__(first_name, is_alive)
-        self.eyes = "blue"
-        self.hair = "ligth"
+        self.eyes = "brown"
+        self.hair = "dark"
 
     def die(self):
         """changes is_alive attribute to False is alive"""
