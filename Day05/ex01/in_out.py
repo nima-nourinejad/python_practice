@@ -7,6 +7,7 @@ def pow(x: int | float) -> int | float:
 
 
 def outer(x: int | float, function):
+    """A higher order function: Takes one or more functions as arguments and/or Returns a function as its result"""
     count = 0
 
     def inner() -> float:

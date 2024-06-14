@@ -1,4 +1,5 @@
 def callLimit(limit: int):
+    """A decorator factory: a specific type of higher order function which the inner function receives a function as input"""
     count = 0
 
     def callLimiter(function):
@@ -6,12 +7,11 @@ def callLimit(limit: int):
 
         def limit_function(*args, **kwds):
             nonlocal count
-            nonlocal function
             if count < limit:
                 count += 1
                 function(*args, **kwds)
             else:
                 print(f"<function {function} at {hex(id(function))}\
-                      call too many times")
+call too many times")
         return limit_function
     return callLimiter
